@@ -44,10 +44,7 @@ class PaperBook(Book):
             raise ValueError("Количество страниц должно быть положительным числом")
         self._pages = pages
 
-    # перегрузка методов, так как родительский класс не предполагает вывод количества страниц
-    def __str__(self):
-        return f"Книга {self._name}. Автор {self._author}. Количество страниц {self._pages}."
-
+    # перегрузка метода, так как родительский класс не предполагает вывода количества страниц
     def __repr__(self):
         return f"{self.__class__.__name__}(name={self._name!r}, author={self._author!r}, pages={self._pages!r})"
 
@@ -68,10 +65,7 @@ class AudioBook(Book):
             raise ValueError("Продолжительность аудиокниги должна быть положительным числом")
         self._duration = duration
 
-    # перегрузка методов, так как родительский класс не предполагает вывод продолжительности
-    def __str__(self):
-        return f"Книга {self._name}. Автор {self._author}. Продолжительность аудиокниги {self._duration}."
-
+    # перегрузка метода, так как родительский класс не предполагает вывода продолжительности
     def __repr__(self):
         return f"{self.__class__.__name__}(name={self._name!r}, author={self._author!r}, duration={self._duration!r})"
 
